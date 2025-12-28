@@ -1,17 +1,17 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Florjan Dhima",
+  title: "Software Engineer",
+  // description: "Portfolio website of Ryan Fitzgerald",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
+    email: "dflorian251@gmail.com",
+    linkedin: "https://www.linkedin.com/in/florjan-dhima-511837257/",
     twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    github: "https://github.com/fdhima",
   },
   aboutMe:
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+  skills: ["Python", "ReactJS", "Linux", "SQL", "Docker"],
   projects: [
     {
       name: "AI Dev Roundup Newsletter",
@@ -37,9 +37,9 @@ export const siteConfig = {
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "PDMFC",
+      title: "Junior Software Engineer",
+      dateRange: "Sep 2024 - Dec 2025",
       bullets: [
         "Led development of microservices architecture serving 1M+ users",
         "Reduced API response times by 40% through optimization",
@@ -47,45 +47,26 @@ export const siteConfig = {
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "CWA",
+      title: "Software Engineer",
+      dateRange: "Jul 2024 - Aug 2024",
       bullets: [
         "Built and launched MVP product from scratch using React and Node.js",
         "Implemented CI/CD pipeline reducing deployment time by 60%",
         "Collaborated with product team to define technical requirements",
       ],
     },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
-      ],
-    },
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "Ionian University",
+      degree: "BSc in Informatics",
+      dateRange: "2021 - 2015",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
-      ],
-    },
-    {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
+        "GPA: 8.83/10",
+        "Ranking top 3% at throughtout all years.",
+        "Thesis: Design and Implementation of a 6G Testbed for Pilot Planning."
+        // "President of Computer Science Club",
       ],
     },
   ],
