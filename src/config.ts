@@ -1,62 +1,84 @@
 export const siteConfig = {
   name: "Florjan Dhima",
   title: "Software Engineer",
-  // description: "Portfolio website of Ryan Fitzgerald",
-  accentColor: "#1d4ed8",
+  accentColor: "#22A7F0",
   social: {
     email: "dflorian251@gmail.com",
     linkedin: "https://www.linkedin.com/in/florjan-dhima-511837257/",
-    twitter: "https://x.com/rfitzio",
+    twitter: "https://x.com/fdhima1",
     github: "https://github.com/fdhima",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Python", "ReactJS", "Linux", "SQL", "Docker"],
+    "Software Engineer with a strong foundation in backend development, data-driven applications, and virtualization technologies. I have hands-on experience building APIs, designing databases, automating infrastructure with Proxmox, and developing machine learning-powered web applications using Python and Streamlit. I enjoy working on practical systems that combine software engineering, data analysis, and cybersecurity concepts, and I am always eager to learn and apply new technologies in real-world projects.",
+  skills: [
+    "Python",
+    "JavaScript",
+    "SQL",
+    "PHP",
+    "Streamlit",
+    "ReactJS",
+    "Linux",
+    "Docker",
+    "Proxmox",
+    "Git",
+    "Machine Learning",
+  ],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "HAHE Analysis",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Exploratory data analysis and visualization project for the Hellenic Authority for Higher Education dataset. Includes dataset construction, cleaning, and statistical insights.",
+      link: "https://github.com/fdhima/hahe-analysis",
+      skills: ["Python", "Pandas", "Data Analysis", "Visualization"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "StreamML",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Machine learning web application for interactive data analysis and visualization. Implements clustering workflows using K-Means and Hierarchical Clustering through a Streamlit-based UI.",
+      link: "https://github.com/dflorian251/Decision-Support-Systems",
+      skills: ["Python", "Streamlit", "Machine Learning", "Data Analysis"],
     },
     {
-      name: "ExtensionKit",
+      name: "MarketingDSS",
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Web-based Decision Support System leveraging Random Forest models for predictive analytics, developed and deployed using Streamlit.",
+      link: "https://marketing-dss.streamlit.app/",
+      skills: ["Python", "Streamlit", "Random Forest", "Data Science"],
+    },
+    {
+      name: "TrelloClone",
+      description:
+        "Full-stack task management application inspired by Trello, featuring user authentication, task CRUD operations, assignments, and push notifications.",
+      link: "https://github.com/dflorian251/Internet-Technologies",
+      skills: ["JavaScript", "PHP", "MySQL", "HTML", "CSS"],
     },
   ],
   experience: [
     {
       company: "PDMFC",
-      title: "Junior Software Engineer",
+      title: "Software Developer",
       dateRange: "Sep 2024 - Dec 2025",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Designed and automated virtual machine deployment workflows using Proxmox.",
+        "Developed provisioning and configuration scripts to standardize VM environments.",
+        "Implemented cybersecurity simulation scenarios across distributed virtual machines.",
+        "Designed relational database schemas and migrations for Sigma detection rules.",
+        "Built backend services to retrieve Sigma rules, convert them to SQL, and schedule query execution.",
+        "Developed REST APIs for managing and interacting with Sigma detection rules.",
+        "Implemented a self-sovereign identity (SSI) authentication flow following community standards.",
       ],
     },
     {
       company: "CWA",
-      title: "Software Engineer",
-      dateRange: "Jul 2024 - Aug 2024",
+      title: "Software Developer Intern",
+      dateRange: "Jul 2024 - Sep 2024",
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
+        "Developed scheduled CRON jobs in TypeScript to clean up stale and pending requests.",
+        "Implemented mobile UI components using the Ionic framework.",
       ],
     },
   ],
+
   education: [
     {
       school: "Ionian University",
@@ -66,7 +88,6 @@ export const siteConfig = {
         "GPA: 8.83/10",
         "Ranking top 3% at throughtout all years.",
         "Thesis: Design and Implementation of a 6G Testbed for Pilot Planning."
-        // "President of Computer Science Club",
       ],
     },
   ],
