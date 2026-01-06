@@ -94,6 +94,29 @@ export const siteConfig = {
   ],
 
   educational_material: [
-    
+    {
+      title: "Neural Networks & Deep Learning",
+      description: "Foundational concepts of backpropagation, activation functions, and architecture design for deep neural networks.",
+      icon: "brain",
+      tags: ["Theory", "Calculus", "Optimization"],
+    },
+    {
+      title: "Transformers & LLMs",
+      description: "Deep dive into the Attention mechanism, self-attention, and the evolution of Large Language Models.",
+      icon: "robot",
+      tags: ["NLP", "Attention", "Generative AI"],
+    },
+    {
+      title: "Recommender Systems",
+      description: "Collaborative filtering, matrix factorization, and hybrid models for personalized content delivery.",
+      icon: "sparkles",
+      tags: ["EDA", "Cold Start", "Algorithms"],
+    },
+    {
+      title: "Optimization Algorithms",
+      description: "Exploring GD, Adam, and RMSProp convergence properties in high-dimensional loss landscapes.",
+      icon: "trending-up",
+      tags: ["Math", "Convergence", "SGD"],
+    }
   ]
 };

@@ -1,0 +1,73 @@
+---
+import { siteConfig } from "../config";
+
+interface Note {
+  title: string;
+  description: string;
+  icon: string;
+  tags: string[];
+}
+
+const notes = siteConfig.educational_material || [];
+
+const iconMap: Record<string, any> = {
+  brain: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>`,
+  robot: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>`,
+  sparkles: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="m5 3 1 1"/><path d="m19 17 1 1"/><path d="M21 3l-1 1"/><path d="M5 17l-1 1"/></svg>`,
+  "trending-up": `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
+};
+---
+
+<section id="notes" class="relative py-24 overflow-hidden bg-slate-50">
+  <!-- Subtle Background Pattern -->
+  <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+    <svg width="100%" height="100%">
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1" />
+      </pattern>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="flex flex-col items-center text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
+        University <span class="text-[var(--accent-color)]">Material</span>
+      </h2>
+      <div class="w-20 h-1.5 bg-[var(--accent-color)] rounded-full mb-8"></div>
+      
+      <div class="max-w-3xl p-8 md:p-12 rounded-3xl bg-white/40 backdrop-blur-xl border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500">
+        <p class="text-xl text-slate-600 font-medium leading-relaxed mb-10">
+          Notes from the course of Aritificial Intelligence of Ionian University (2024).
+          Covering essential concepts in Logic, search strategies like BFS/DFS, 
+          competitive AI with MiniMax, 
+          optimization via Hill Climbing, 
+          and various Classification methodologies.
+        </p>
+        <p class="text-sm text-slate-600 mb-10">
+          Diclaimer: The author makes no guarantees regarding the completeness, accuracy, or suitability of the materials for any specific purpose.
+The use of the content is entirely at the user’s own risk.
+        </p>
+
+        <a href="/ai-notes.pdf" download="ai-notes.pdf" class="inline-flex px-10 py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-[var(--accent-color)] transition-all duration-300 shadow-lg hover:shadow-[var(--accent-color)]/25 items-center gap-3 group">
+            Access Notes & Algorithms
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #notes {
+    --accent-color: #22A7F0;
+  }
+
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+</style>
