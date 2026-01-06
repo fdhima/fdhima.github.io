@@ -7,6 +7,7 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/florjan-dhima-511837257/",
     twitter: "https://x.com/fdhima1",
     github: "https://github.com/fdhima",
+    cv: "/resume.pdf",
   },
   aboutMe:
     "Software Engineer with a strong foundation in backend development, data-driven applications, and virtualization technologies. I have hands-on experience building APIs, designing databases, automating infrastructure with Proxmox, and developing machine learning-powered web applications using Python and Streamlit. I enjoy working on practical systems that combine software engineering, data analysis, and cybersecurity concepts, and I am always eager to learn and apply new technologies in real-world projects.",
