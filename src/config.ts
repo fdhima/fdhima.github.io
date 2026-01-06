@@ -92,4 +92,8 @@ export const siteConfig = {
       ],
     },
   ],
+
+  educational_material: [
+    
+  ]
 };
