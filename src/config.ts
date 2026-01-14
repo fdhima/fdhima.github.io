@@ -87,7 +87,7 @@ export const siteConfig = {
       dateRange: "2021 - 2015",
       achievements: [
         "GPA: 8.83/10",
-        "Ranking top 3% at throughtout all years.",
+        "Ranked in the top 3% throughout all years of study..",
         "Thesis: Design and Implementation of a 6G Testbed for Pilot Planning."
       ],
     },
