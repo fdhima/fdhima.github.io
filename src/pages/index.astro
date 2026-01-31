@@ -15,8 +15,18 @@ import CookieConsent from "../components/CookieConsent.astro";
 <html lang="en">
   <head>
     <script is:inline>
+      // Define dataLayer and the gtag function.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+
+      // Default to 'denied' for all consent types.
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+      
       gtag('js', new Date());
       gtag('config', 'G-2ERNKL0PCG');
     </script>
@@ -47,5 +57,6 @@ import CookieConsent from "../components/CookieConsent.astro";
       <Notes />
     </section>
     <Footer />
+    <CookieConsent />
   </body>
 </html>

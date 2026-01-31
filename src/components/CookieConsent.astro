@@ -2,8 +2,7 @@
 ---
 <div id="cookie-consent" class="cookie-consent fixed bottom-4 left-1/2 -translate-x-1/2 z-50 max-w-3xl w-[92%] bg-white/95 border border-gray-200 rounded-lg p-4 shadow-lg hidden">
   <div class="flex items-start gap-4">
-    <div class="flex-1 text-sm text-gray-800">
-      I use Google Analytics to collect anonymous visit statistics. By accepting, you allow analytics cookies to be used on this site.
+      I use Google Analytics and minimal cookies to analyze traffic and improve user experience. By clicking "Accept", you agree to the storing of cookies on your device.
     </div>
     <div class="flex gap-2">
       <button id="cc-decline" class="px-3 py-1 rounded bg-gray-100 text-sm">Decline</button>
@@ -34,11 +33,20 @@
         try { localStorage.setItem(key, value); } catch (e) {}
         if (typeof gtag === 'function') {
           if (value === 'accepted') {
-            gtag('consent', 'update', { 'ad_storage': 'granted', 'analytics_storage': 'granted' });
-            // send a page_view now that consent is granted
-            gtag('config', 'G-2ERNKL0PCG', { 'send_page_view': true });
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'ad_user_data': 'granted',
+              'ad_personalization': 'granted',
+              'analytics_storage': 'granted'
+            });
+
           } else {
-            gtag('consent', 'update', { 'ad_storage': 'denied', 'analytics_storage': 'denied' });
+            gtag('consent', 'update', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied'
+            });
           }
         }
       }
