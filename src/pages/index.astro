@@ -15,6 +15,7 @@ import CookieConsent from "../components/CookieConsent.astro";
 <html lang="en">
   <head>
     <!-- Google Consent Mode: default denied until user consents -->
+    <!-- 
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -30,6 +31,18 @@ import CookieConsent from "../components/CookieConsent.astro";
       gtag('js', new Date());
       gtag('config', 'G-2ERNKL0PCG', { 'anonymize_ip': true, 'send_page_view': false });
     </script>
+    -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ERNKL0PCG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2ERNKL0PCG');
+    </script>
+
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
