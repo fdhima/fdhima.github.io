@@ -14,25 +14,6 @@ import CookieConsent from "../components/CookieConsent.astro";
 
 <html lang="en">
   <head>
-    <!-- Google Consent Mode: default denied until user consents -->
-    <!-- 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      // Default consent: do not use analytics or ad storage until user consents
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied'
-      });
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ERNKL0PCG"></script>
-    <script>
-      // Initialize gtag but don't send automatic page_view until consent is granted
-      gtag('js', new Date());
-      gtag('config', 'G-2ERNKL0PCG', { 'anonymize_ip': true, 'send_page_view': false });
-    </script>
-    -->
-
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
