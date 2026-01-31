@@ -1,0 +1,75 @@
+---
+---
+<div id="cookie-consent" class="cookie-consent fixed bottom-4 left-1/2 -translate-x-1/2 z-50 max-w-3xl w-[92%] bg-white/95 border border-gray-200 rounded-lg p-4 shadow-lg hidden">
+  <div class="flex items-start gap-4">
+    <div class="flex-1 text-sm text-gray-800">
+      I use Google Analytics to collect anonymous visit statistics. By accepting, you allow analytics cookies to be used on this site.
+    </div>
+    <div class="flex gap-2">
+      <button id="cc-decline" class="px-3 py-1 rounded bg-gray-100 text-sm">Decline</button>
+      <button id="cc-accept" class="px-3 py-1 rounded bg-blue-600 text-white text-sm">Accept</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-consent { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+</style>
+
+<script>
+  // This script runs in the browser when the component is hydrated (component is used with client:load)
+  (function () {
+    try {
+      const key = 'cookie_consent';
+      const el = document.getElementById('cookie-consent');
+      const btnAccept = document.getElementById('cc-accept');
+      const btnDecline = document.getElementById('cc-decline');
+
+      if (!el || !btnAccept || !btnDecline) return;
+
+      function hide() { el.style.display = 'none'; }
+      function show() { el.style.display = 'block'; }
+
+      function setConsent(value) {
+        try { localStorage.setItem(key, value); } catch (e) {}
+        if (typeof gtag === 'function') {
+          if (value === 'accepted') {
+            gtag('consent', 'update', { 'ad_storage': 'granted', 'analytics_storage': 'granted' });
+            // send a page_view now that consent is granted
+            gtag('config', 'G-2ERNKL0PCG', { 'send_page_view': true });
+          } else {
+            gtag('consent', 'update', { 'ad_storage': 'denied', 'analytics_storage': 'denied' });
+          }
+        }
+      }
+
+      const saved = (function(){ try { return localStorage.getItem(key); } catch (e) { return null; } })();
+      if (saved === 'accepted') {
+        setConsent('accepted');
+        hide();
+        return;
+      }
+      if (saved === 'rejected') {
+        setConsent('rejected');
+        hide();
+        return;
+      }
+
+      // no saved choice -> show banner
+      show();
+
+      btnAccept.addEventListener('click', function () {
+        setConsent('accepted');
+        hide();
+      });
+
+      btnDecline.addEventListener('click', function () {
+        setConsent('rejected');
+        hide();
+      });
+    } catch (e) {
+      // fail silently
+      console.warn('CookieConsent error', e);
+    }
+  })();
+</script>
